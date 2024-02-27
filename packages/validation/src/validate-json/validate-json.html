@@ -1,0 +1,38 @@
+<script type="text/javascript">
+  RED.nodes.registerType("validate JSON", {
+    category: "validation",
+    color: "#9370DB",
+    defaults: {
+      name: { value: "Validate JSON" },
+      schema: { value: "", required: true },
+    },
+    inputs: 1,
+    outputs: 2,
+    icon: "font-awesome/fa-tag",
+    label: function () {
+      return this.name || "Validate JSON";
+    },
+    oneditprepare: function () {
+      $("#node-input-schema").typedInput({
+        types: ["json"],
+        type: "json",
+      });
+    },
+  });
+</script>
+
+<script type="text/html" data-template-name="validate JSON">
+  <div class="form-row">
+    <label for="node-input-name">Name</label>
+    <input type="text" id="node-input-name" placeholder="Name" />
+  </div>
+
+  <div class="form-row">
+    <label for="node-input-schema">JSON Schema</label>
+    <input type="json" id="node-input-schema" placeholder="JSON Schema" />
+  </div>
+</script>
+
+<script type="text/html" data-help-name="validate JSON">
+  <p></p>
+</script>

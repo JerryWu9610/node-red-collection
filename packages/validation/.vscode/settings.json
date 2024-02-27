@@ -1,0 +1,11 @@
+{
+    "eslint.format.enable": true,
+    "editor.formatOnSave": true,
+    "[typescript]": {
+      "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    },
+    "[javascript]": {
+      "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    },
+    "jestrunner.configPath": "jest.unit.config.js"
+}
